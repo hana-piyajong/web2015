@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+:root {
+  font-family: 'Manrope', sans-serif;
+  color: #1d2433;
+  background: #ffffff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #ffffff;
+}
+/* 
+button,
+input {
+  font: inherit;
+} */
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#app {
+  min-height: 100vh;
+}
+
+.nav-link {
+  position: relative;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  color: #4d5971;
+}
+
+.nav-link.active {
+  color: #2d6be4;
+}
+
+.nav-link.active::after {
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  height: 2px;
+  width: 100%;
+  border-radius: 999px;
+  background: #2d6be4;
+  content: '';
+}
+
+.results-pill {
+  display: flex;
+  min-height: 56px;
+  align-items: center;
+  gap: 12px;
+  border-radius: 14px;
+  border: 1px solid #d7deea;
+  background: #f5f7fc;
+  padding: 0 16px;
+}
+
+.results-pill-icon {
+  display: flex;
+  width: 28px;
+  height: 28px;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+}
+
+.results-label {
+  font-size: 12px;
+  line-height: 1;
+  color: #6f7789;
+}
+
+.results-value {
+  margin-top: 4px;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.1;
+  color: #313a4a;
+}
+
+.results-pill-destination {
+  min-width: 0;
+}
+
+.filter-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #313a4a;
+}
+
+.filter-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  color: #4c5567;
+}
+
+.filter-option input {
+  width: 18px;
+  height: 18px;
+  border: 1px solid #cfd6e4;
+  border-radius: 5px;
+  accent-color: #2d6be4;
+}
+
+.pager-button {
+  display: inline-flex;
+  min-width: 42px;
+  height: 42px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  border: 1px solid #d7deea;
+  background: #fff;
+  color: #4a5366;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.pager-button.active {
+  background: #2d6be4;
+  border-color: #2d6be4;
+  color: #fff;
+}
+
+.hero-shell {
+  position: relative;
+  background: linear-gradient(180deg, #0f4d88 0%, #0f4271 45%, #173537 100%);
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(10, 30, 64, 0.22), rgba(17, 38, 60, 0.38)),
+    linear-gradient(0deg, rgba(17, 40, 47, 0.28), rgba(17, 40, 47, 0.04));
+}
+
+.input-shell {
+  display: flex;
+  height: 62px;
+  align-items: center;
+  gap: 10px;
+  border-radius: 12px;
+  border: 1.5px solid #93a7ee;
+  padding: 0 15px;
+}
+
+.input-icon {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+}
+
+.search-input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  color: #7d879a;
+}
+
+.search-input::placeholder {
+  color: #7d879a;
+}
+
+.search-date {
+  color: #222a39;
+}
+
+.city-image-shell {
+  position: relative;
+}
+
+.city-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.city-image-bangkok .city-image {
+  object-position: center top;
+}
+
+.city-image-tokyo .city-image {
+  object-position: center center;
+}
+
+.city-image-paris .city-image {
+  object-position: center center;
+}
+
+.city-image-london .city-image {
+  object-position: center center;
+}
+
+.promo-banner-full {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 24px;
+}
+
+.newsletter-input {
+  display: flex;
+  height: 66px;
+  align-items: center;
+  border-radius: 18px;
+  border: 1.5px solid #8ea3ef;
+  background: #ffffff;
+  padding: 0 24px;
+}
+
+.newsletter-field {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  color: #1d2433;
+}
+
+.newsletter-field::placeholder {
+  color: #8d93a3;
+}
+
+@media (max-width: 1023px) {
+  .nav-link {
+    font-size: 12px;
+  }
+
+  .nav-link.active::after {
+    bottom: -12px;
+  }
+}
+
+@media (max-width: 639px) {
+  .nav-link {
+    font-size: 9px;
+  }
+
+  .input-shell,
+  .newsletter-input {
+    height: 58px;
+  }
+
+}
